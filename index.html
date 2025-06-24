@@ -12,7 +12,10 @@
     />
     <meta name="author" content="" />
     <title>Zto1 Foundation</title>
-    <meta name="google-site-verification" content="8gx1oQpXP5ViuvMOsf_xJQhTQ8Zlil_mgF0dssS-deE" />
+    <meta
+      name="google-site-verification"
+      content="8gx1oQpXP5ViuvMOsf_xJQhTQ8Zlil_mgF0dssS-deE"
+    />
     <meta
       name="description"
       content="Zto1 Foundation empowers India's most marginalized communities through grassroots initiatives in education, healthcare, and sustainable development."
@@ -201,12 +204,68 @@
             href="mailto:info@zto1.org"
             >Contact Us</a
           >
-          <a class="btn btn-dark btn-xl rounded-pill px-4 py-2 mb-3" href="#!"
-            >Donate Now</a
+          <a
+            class="btn btn-dark btn-xl rounded-pill px-4 py-2 mb-3"
+            href="#!"
+            data-bs-toggle="modal"
+            data-bs-target="#donateModal"
           >
+            Donate Now
+          </a>
         </div>
       </div>
     </section>
+
+    <!-- Add this modal right before the footer section -->
+    <!-- Donation Modal -->
+    <div
+      class="modal fade"
+      id="donateModal"
+      tabindex="-1"
+      aria-labelledby="donateModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="donateModalLabel">Support Our Cause</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <p class="mb-4">Scan this QR code to make a donation via UPI</p>
+            <img
+              src="assets/donation-qr.png"
+              alt="Donation QR Code"
+              class="img-fluid mb-4"
+              style="max-width: 250px"
+            />
+            <p class="text-muted small">
+              Alternatively, you can donate to:<br />
+              Z TO 1 FOUNDATION <br/>
+              Kotak Mahindra Bank <br/>
+              UPI ID: zto1@kotak<br />
+              Account Number: 8250255379<br />
+              IFSC: KKBK0003063<br/>
+              Branch : Kudasan, Gandhinagar
+            </p>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer-->
     <!-- Redesigned Footer -->
