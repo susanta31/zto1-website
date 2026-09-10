@@ -507,218 +507,167 @@
         text-decoration: none;
       }
 
-      /* Generic Announcement / New Program Banner */
       /* =========================================
-   TOP ANNOUNCEMENT BAR
-   ========================================= */
-
-.announcement-banner {
-  position: relative;
-  width: 100%;
-  min-height: 48px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-sizing: border-box;
-
-  padding: 9px 70px 9px 20px;
-
-  background: linear-gradient(
-    90deg,
-    #fff8df 0%,
-    #fff3cd 50%,
-    #fff8df 100%
-  );
-
-  border-bottom: 2px solid #ffc107;
-
-  z-index: 9999;
-
-  font-family: inherit;
-}
-
-
-/* Content wrapper */
-
-.announcement-content {
-  width: 100%;
-  max-width: 1400px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 10px;
-
-  text-align: center;
-}
-
-
-/* NEW badge */
-
-.announcement-banner .new-badge {
-  flex-shrink: 0;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 3px 8px;
-
-  color: #ffffff;
-  background: #dc3545;
-
-  border-radius: 4px;
-
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-
-  animation: announcement-blink 1.4s ease-in-out infinite;
-}
-
-
-/* Link */
-
-.announcement-banner a {
-  display: block;
-
-  color: #212529;
-
-  text-decoration: none;
-
-  font-size: 17px;
-  font-weight: 600;
-
-  line-height: 1.5;
-
-  transition:
-    color 0.2s ease,
-    opacity 0.2s ease;
-}
-
-
-/* Gujarati title */
-
-.announcement-title {
-  font-weight: 700;
-}
-
-
-/* Separator */
-
-.announcement-separator {
-  margin: 0 8px;
-
-  color: #dc3545;
-  font-weight: 700;
-}
-
-
-/* Registration text */
-
-.announcement-action {
-  color: #111111;
-  font-weight: 700;
-}
-
-
-/* Hover */
-
-.announcement-banner a:hover {
-  color: #d63333;
-}
-
-
-/* NEW animation */
-
-@keyframes announcement-blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.55;
-  }
-}
-
-
-/* =========================================
-   TABLET
-   ========================================= */
-
-@media (max-width: 992px) {
-
+     TOP ANNOUNCEMENT BAR
+     ========================================= */
   .announcement-banner {
-    padding: 8px 60px 8px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--banner-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0 20px;
+    
+    /* Beautiful gradient background */
+    background: linear-gradient(90deg, #fff8df 0%, #fff3cd 50%, #fff8df 100%);
+    border-bottom: 1px solid #ffc107;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    
+    z-index: 1050;
+    font-family: inherit;
+    overflow: hidden;
   }
 
-  .announcement-banner a {
-    font-size: 15px;
-  }
-
-}
-
-
-/* =========================================
-   MOBILE
-   ========================================= */
-
-@media (max-width: 768px) {
-
-  .announcement-banner {
-    min-height: auto;
-
-    padding: 8px 50px 8px 10px;
-  }
-
+  /* Content wrapper */
   .announcement-content {
-    gap: 6px;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    flex-wrap: wrap;
   }
 
+  /* NEW badge */
   .announcement-banner .new-badge {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 2px 6px;
-    font-size: 11px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    animation: announcement-blink 1.6s ease-in-out infinite;
+    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.3);
   }
 
+  /* Link */
   .announcement-banner a {
-    font-size: 13px;
-    line-height: 1.4;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #212529;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+    transition: color 0.2s ease;
   }
 
-}
-
-
-/* =========================================
-   SMALL MOBILE
-   ========================================= */
-
-@media (max-width: 480px) {
-
-  .announcement-banner {
-    padding: 7px 45px 7px 8px;
-  }
-
-  .announcement-content {
-    align-items: flex-start;
-  }
-
-  .announcement-banner .new-badge {
-    margin-top: 2px;
-  }
-
-  .announcement-banner a {
-    font-size: 12px;
+  /* Text styles */
+  .announcement-title {
+    font-weight: 700;
   }
 
   .announcement-separator {
-    margin: 0 4px;
+    margin: 0 6px;
+    color: #dc3545;
+    font-weight: 700;
   }
 
-}
+  .announcement-action {
+    color: #111111;
+    font-weight: 700;
+  }
+
+  /* Hover */
+  .announcement-banner a:hover {
+    color: #d63333;
+  }
+
+  /* NEW animation */
+  @keyframes announcement-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  /* =========================================
+     LAYOUT ADJUSTMENTS (PUSHING LOGO & NAV DOWN)
+     ========================================= */
+  body {
+    padding-top: var(--banner-height);
+  }
+
+  /* Push logo down below the banner */
+  .logo-container {
+    top: calc(var(--banner-height) + 10px) !important;
+    z-index: 1040;
+  }
+
+  /* Push navigation toggle down below the banner */
+  .menu-toggle {
+    top: calc(var(--banner-height) + 10px) !important;
+    z-index: 1040;
+  }
+
+  /* =========================================
+     TABLET
+     ========================================= */
+  @media (max-width: 992px) {
+    :root { --banner-height: 40px; }
+    .announcement-banner a { font-size: 13px; }
+  }
+
+  /* =========================================
+     MOBILE
+     ========================================= */
+  @media (max-width: 768px) {
+    :root { --banner-height: 60px; }
+    .announcement-banner { padding: 0 10px; }
+    .announcement-content { gap: 4px; }
+    .announcement-banner .new-badge { font-size: 9px; padding: 1px 4px; }
+    .announcement-banner a { font-size: 12px; }
+  }
+
+  /* =========================================
+     SMALL MOBILE
+     ========================================= */
+  @media (max-width: 480px) {
+    :root { --banner-height: 70px; }
+    .announcement-banner a { font-size: 11px; }
+    /* Hide the separator on very small screens to save space */
+    .announcement-separator { display: none; }
+  }
+
+  /* Existing social icon styles */
+  .social-icons { display: inline-flex; }
+  .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease;
+  }
+  .social-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
     </style>
 
     <!-- Scroll to Top Button-->
